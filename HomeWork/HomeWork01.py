@@ -22,13 +22,13 @@ else:
 # 24 -> 4  16  4
 # 60 -> 10  40  10
 
-numCranes = int(input("Введите общее количество сделаных журавликов: "))
-if numCranes % 2 != 0:
+num_cranes = int(input("Введите общее количество сделаных журавликов: "))
+if num_cranes % 2 != 0:
     print("Число должно быть четным!")
 else:
-    numCranesKaty = numCranes - (numCranes // 3)
-    print(f"{numCranes} -> {(numCranes - numCranesKaty) // 2} "
-          f"{numCranesKaty} {(numCranes - numCranesKaty) // 2}")
+    num_cranes_katy = num_cranes - (num_cranes // 3)
+    print(f"{num_cranes} -> {(num_cranes - num_cranes_katy) // 2} "
+          f"{num_cranes_katy} {(num_cranes - num_cranes_katy) // 2}")
 
 
 
@@ -43,15 +43,15 @@ else:
 # 385916 -> yes
 # 123456 -> no
 
-numTicket = int(input("Введите шестизначный номер билет: "))
-firstSum = None
-secondSum = None
-resultYes = "Yes"
-resultNo = "No"
-if 99999 < numTicket < 1000000:
-      firstSum = numTicket // 100000 % 10 + numTicket // 10000 % 10 + numTicket // 1000 % 10
-      secondSum = numTicket // 100 % 10 + numTicket // 10 % 10 + numTicket % 10
-      print(f"{numTicket} -> {resultYes if firstSum == secondSum else resultNo}")
+num_ticket = int(input("Введите шестизначный номер билет: "))
+first_sum = None
+second_sum = None
+result_yes = "Yes"
+result_no = "No"
+if 99999 < num_ticket < 1000000:
+      first_sum = num_ticket // 100000 % 10 + num_ticket // 10000 % 10 + num_ticket // 1000 % 10
+      second_sum = num_ticket // 100 % 10 + num_ticket // 10 % 10 + num_ticket % 10
+      print(f"{num_ticket} -> {result_yes if first_sum == second_sum else result_no}")
 else:
       print("Вы ввели не шестизначный номер!")
 
@@ -66,11 +66,11 @@ else:
 # 3 2 4 -> yes
 # 3 2 1 -> no
 
-numRow = int(input("Введите длинну плитки: "))
-numColumn = int(input("Введите ширину плитки: "))
-numSlice = int(input("Введите количество долек: "))
-resultYes = "Yes"
-resultNo = "No"
+num_row = int(input("Введите длинну плитки: "))
+num_column = int(input("Введите ширину плитки: "))
+num_slice = int(input("Введите количество долек: "))
+result_yes = "Yes"
+result_no = "No"
 
-print(f"{numRow} {numColumn} {numSlice} -> "
-      f"{resultYes if bool(numSlice % numRow == 0 or numSlice % numColumn == 0) else resultNo}")
+print(f"{num_row} {num_column} {num_slice} -> "
+      f"{result_yes if bool(num_slice % num_row == 0 or num_slice % num_column == 0) else result_no}")
